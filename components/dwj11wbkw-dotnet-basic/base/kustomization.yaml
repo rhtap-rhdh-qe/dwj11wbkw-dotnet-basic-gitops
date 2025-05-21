@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: dwj11wbkw-dotnet-basic
+  janus-idp.io/tekton: dwj11wbkw-dotnet-basic
+  backstage.io/kubernetes-id: dwj11wbkw-dotnet-basic
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: dwj11wbkw-dotnet-basic
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
